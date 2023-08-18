@@ -1,11 +1,534 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Торты на заказ</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
+   <header class="header">
+      <div class="container header__container">
+         <div class="header__left">
+            <div class="logo">
+               <a href="#">
+                  <img src="./img/heroicons_cake-20-solid-white.svg" alt="logo" width="33">
+               </a>
+            </div>
+            <div class="schedule-phone">
+               <div class="schedule">с 10.00 до 20.00 без выходных</div>
+               <a class="phone" href="tel:+78432554076">+7 (843) 888-88-88</a>
+            </div>
+         </div>
+         <div class="header__right">
+            <nav class="nav__menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a class="nav__link" href="#"><span class="nav__text">Каталог</span></a>
+                  </li>
+                  <li class="nav__item">
+                     <a class="nav__link" href="#"><span class="nav__text">О нас</span></a>                     
+                  </li>
+                  <li class="nav__item">
+                     <a class="nav__link" href="#"><span class="nav__text">Оплата и доставка</span></a>                     
+                  </li>
+               </ul>
+            </nav>
+            <div class="hamburger">
+               <button class="hamburger__btn" type="button" data-popup="popup-menu">
+                  <span class="hamburger__box">
+                     <span class="hamburger__inner"></span>
+                  </span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- /.header -->
+
+   <main>
+      <section class="hero">
+         <div class="container hero__container">
+            <h1 class="hero__title">Торты на заказ в Казани</h1>
+            <p class="hero__subtitle">Только натуральные ингридиенты</p>
+            <button class="btn hero__btn" type="button">Выбрать торт</button>
+         </div>
+      </section>
+      <!-- /.hero -->
+
+      <section class="section section-catalog">
+         <div class="container">
+            <div class="section__top">
+               <h2 class="section__title">Мы предлагаем</h2>
+                <nav class="catalog__nav">
+                  <ul class="catalog__nav-list">
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn is-active" type="button">Все торты</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">Детские</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">Свадебные</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">На день рождения</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">Бенто-торты</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">Капкейки</button>
+                     </li>
+                     <li class="catalog__nav-item">
+                        <button class="catalog__nav-btn" type="button">Пирожные</button>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <ul class="catalog__list">
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+               <li class="catalog__item">
+                  <article class="catalog__product">
+                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <div class="product__content">
+                        <h3 class="product__title">Торт Сильвер</h3>
+                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
+                     </div>
+                     <footer class="product__footer">
+                        <div class="product__sizes">
+                           <button class="product__size is-active" type="button">2 кг</button>
+                           <button class="product__size" type="button">3 кг</button>
+                           <button class="product__size" type="button">4 кг</button>
+                           <button class="product__size" type="button">5 кг</button>
+                        </div>
+                     </footer>
+                     <div class="product__bottom">
+                        <div class="product__price">
+                           <span class="product__price-value">2490</span>
+                           <span class="product__price-currency">&#8381;</span>
+                        </div>
+                        <button class="btn product__btn" type="button">Заказать</button>
+                     </div>
+                  </article>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <!-- /.catalog-->
+
+      <section class="section-about">
+         <img class="section-about__img" src="./img/about-bg.jpg" alt="">
+         <div class="container section-about__container">
+            <div class="section-about__content">
+               <h2 class="section__title section-about__title">О нас</h2>
+               <p class="section-about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt placeat impedit optio, accusamus magnam eos esse natus perferendis aliquam dolores laborum veniam soluta recusandae, quod similique vitae exercitationem in!</p>
+            </div>
+         </div>
+      </section>
+      <!-- /.about-->
+
+      <section class="section section-delivery">
+         <div class="container">
+            <h2 class="section__title">Условия оплаты и доставки</h2>
+            <ul class="delivery__list">
+               <li class="delivery__item">
+                  <h4 class="delivery__title">Как заказать?</h4>
+                  <p class="delivery__text">Оставьте заявку на сайте или позвоните нам. Для брони заказа необходимо внести 50%-ную предоплату.</p>
+               </li>
+               <li class="delivery__item">
+                  <h4 class="delivery__title">Как оплатить?</h4>
+                  <p class="delivery__text">Вы можете приехать к нам, чтобы внести предоплату или перевести ее на карту Сбербанка. Это быстро и удобно.</p>
+               </li>
+               <li class="delivery__item">
+                  <h4 class="delivery__title">Как забрать?</h4>
+                  <p class="delivery__text">Доплата и самовывоз осуществляются в назначенный день. Есть возможность оформить доставку стоимостью от 200 р.</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <!-- /.delivery-->
+
+      <section class="section section-news">
+         <div class="container">
+            <h2 class="section__title">Новости</h2>
+            <ul class="news__list">
+               <li class="news__item">
+                  <a class="news__link" href="#">
+                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <div class="news__content">
+                        <div class="news__topic">Советы покупателям</div>
+                        <h4 class="news__title">Как выбрать свадебный торт</h4>
+                        <time class="news__date" datetime="2023-05-23">28.05.23</time>
+                     </div>
+                  </a>
+               </li>
+               <li class="news__item">
+                  <a class="news__link" href="#">
+                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <div class="news__content">
+                        <div class="news__topic">Советы покупателям</div>
+                        <h4 class="news__title">Как выбрать свадебный торт</h4>
+                        <time class="news__date" datetime="2023-05-23">28.05.23</time>
+                     </div>
+                  </a>
+               </li>
+               <li class="news__item">
+                  <a class="news__link" href="#">
+                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <div class="news__content">
+                        <div class="news__topic">Советы покупателям</div>
+                        <h4 class="news__title">Как выбрать свадебный торт</h4>
+                        <time class="news__date" datetime="2023-05-23">28.05.23</time>
+                     </div>
+                  </a>
+               </li>
+               <li class="news__item">
+                  <a class="news__link" href="#">
+                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <div class="news__content">
+                        <div class="news__topic">Советы покупателям</div>
+                        <h4 class="news__title">Как выбрать свадебный торт</h4>
+                        <time class="news__date" datetime="2023-05-23">28.05.23</time>
+                     </div>
+                  </a>
+               </li>               
+            </ul>
+         </div>
+      </section>
+      <!-- /.news-->
+   </main>
+
+   <footer class="footer" style="background-image: url('./img/footer-bg.jpg');">
+      <div class="container footer__container">
+         <div class="footer__info">
+            <h3 class="footer__title">Торты за заказ в Казани</h3>
+            <p class="footer__text">Мы - домашняя кондитерская, выполняем торты на заказ любой сложности. Изготавливаем торты только из натуральных ингредиентов, поэтому торт всегда будет вкусным и свежим. Оставляйте заявку на сайте!</p>
+         </div>
+         <nav class="footer__nav">
+            <h3 class="footer__title">Информация</h3>
+            <ul class="footer__nav-list">
+               <li class="footer__nav-item"><a href="#">Каталог</a></li>
+               <li class="footer__nav-item"><a href="#">Оплата и доставка</a></li>
+               <li class="footer__nav-item"><a href="#">О нас</a></li>
+               <li class="footer__nav-item"><a href="#">Вакансии</a></li>
+            </ul>
+         </nav>
+         <nav class="footer__nav">
+            <h3 class="footer__title">Торты</h3>
+            <ul class="footer__nav-list">
+               <li class="footer__nav-item"><a href="#">Детские</a></li>
+               <li class="footer__nav-item"><a href="#">Свадебные</a></li>
+               <li class="footer__nav-item"><a href="#">На день рождения</a></li>
+               <li class="footer__nav-item"><a href="#">Бенто-торты</a></li>
+               <li class="footer__nav-item"><a href="#">Капкейки</a></li>
+               <li class="footer__nav-item"><a href="#">Пирожные</a></li>
+            </ul>
+         </nav>
+         <nav class="footer__nav footer__nav-subscribe">
+            <h3 class="footer__title ">Будьте в курсе наших акций</h3>
+            <form action="#" class="footer__subscribe">
+               <input class="footer__subscribe-input" type="email" placeholder="Введите email" required>
+               <button class="btn footer__subscribe-btn" type="button">Подписаться</button>
+            </form>
+            <div class="footer__contacts">
+               <div class="schedule-phone footer__schedule-phone">
+                  <div class="schedule footer__schedule">с 10.00 до 20.00 без выходных</div>
+                  <a class="phone footer__phone" href="tel:+78432554076">+7 (843) 888-88-88</a>
+               </div>
+               <ul class="socials__list">
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="27" height="27" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo" d="M9.9999 0.399902C4.6979 0.399902 0.399902 4.6979 0.399902 9.9999C0.399902 15.3019 4.6979 19.5999 9.9999 19.5999C15.3019 19.5999 19.5999 15.3019 19.5999 9.9999C19.5999 4.6979 15.3019 0.399902 9.9999 0.399902ZM13.6919 11.2309C13.6919 11.2309 14.5409 12.0689 14.7499 12.4579C14.7559 12.4659 14.7589 12.4739 14.7609 12.4779C14.8459 12.6209 14.8659 12.7319 14.8239 12.8149C14.7539 12.9529 14.5139 13.0209 14.4319 13.0269H12.9319C12.8279 13.0269 12.6099 12.9999 12.3459 12.8179C12.1429 12.6759 11.9429 12.4429 11.7479 12.2159C11.4569 11.8779 11.2049 11.5859 10.9509 11.5859C10.9186 11.5858 10.8866 11.5909 10.8559 11.6009C10.6639 11.6629 10.4179 11.9369 10.4179 12.6669C10.4179 12.8949 10.2379 13.0259 10.1109 13.0259H9.4239C9.1899 13.0259 7.9709 12.9439 6.8909 11.8049C5.5689 10.4099 4.3789 7.6119 4.3689 7.5859C4.2939 7.4049 4.4489 7.3079 4.6179 7.3079H6.1329C6.3349 7.3079 6.4009 7.4309 6.4469 7.5399C6.5009 7.6669 6.6989 8.1719 7.0239 8.7399C7.5509 9.6659 7.8739 10.0419 8.1329 10.0419C8.18147 10.0413 8.22917 10.029 8.2719 10.0059C8.6099 9.8179 8.5469 8.6129 8.5319 8.3629C8.5319 8.3159 8.5309 7.8239 8.3579 7.5879C8.2339 7.4169 8.0229 7.3519 7.8949 7.3279C7.94671 7.25641 8.01497 7.19845 8.0939 7.1589C8.3259 7.0429 8.7439 7.0259 9.1589 7.0259H9.3899C9.8399 7.0319 9.9559 7.0609 10.1189 7.1019C10.4489 7.1809 10.4559 7.3939 10.4269 8.1229C10.4179 8.3299 10.4089 8.5639 10.4089 8.8399C10.4089 8.8999 10.4059 8.9639 10.4059 9.0319C10.3959 9.4029 10.3839 9.8239 10.6459 9.9969C10.6801 10.0183 10.7196 10.0298 10.7599 10.0299C10.8509 10.0299 11.1249 10.0299 11.8669 8.7569C12.0957 8.34716 12.2946 7.92138 12.4619 7.4829C12.4769 7.4569 12.5209 7.3769 12.5729 7.3459C12.6113 7.32634 12.6538 7.31639 12.6969 7.3169H14.4779C14.6719 7.3169 14.8049 7.3459 14.8299 7.4209C14.8739 7.5399 14.8219 7.9029 14.0089 9.0039L13.6459 9.4829C12.9089 10.4489 12.9089 10.4979 13.6919 11.2309Z"/>
+                     </svg>
+                  </a></li>
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="31" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.0069 10.4582 14.006 10.4252 13.9973 10.3938C13.9886 10.3624 13.9724 10.3337 13.95 10.31C13.89 10.26 13.81 10.28 13.74 10.29C13.65 10.31 12.25 11.24 9.52 13.08C9.12 13.35 8.76 13.49 8.44 13.48C8.08 13.47 7.4 13.28 6.89 13.11C6.26 12.91 5.77 12.8 5.81 12.45C5.83 12.27 6.08 12.09 6.55 11.9C9.47 10.63 11.41 9.79 12.38 9.39C15.16 8.23 15.73 8.03 16.11 8.03C16.19 8.03 16.38 8.05 16.5 8.15C16.6 8.23 16.63 8.34 16.64 8.42C16.63 8.48 16.65 8.66 16.64 8.8Z"/>
+                     </svg>
+                  </a></li>
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="31" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo" d="M12.001 2C17.524 2 22.001 6.477 22.001 12C22.001 17.523 17.524 22 12.001 22C10.2338 22.0029 8.49765 21.5352 6.97099 20.645L2.00499 22L3.35699 17.032C2.46608 15.5049 1.99804 13.768 2.00099 12C2.00099 6.477 6.47799 2 12.001 2ZM8.59299 7.3L8.39299 7.308C8.26351 7.31589 8.13697 7.3499 8.02099 7.408C7.91251 7.46943 7.81349 7.54622 7.72699 7.636C7.60699 7.749 7.53899 7.847 7.46599 7.942C7.09611 8.4229 6.89696 9.01331 6.89999 9.62C6.90199 10.11 7.02999 10.587 7.22999 11.033C7.63899 11.935 8.31199 12.89 9.19999 13.775C9.41399 13.988 9.62399 14.202 9.84999 14.401C10.9534 15.3725 12.2682 16.073 13.69 16.447L14.258 16.534C14.443 16.544 14.628 16.53 14.814 16.521C15.1052 16.506 15.3896 16.4271 15.647 16.29C15.7779 16.2225 15.9057 16.1491 16.03 16.07C16.03 16.07 16.073 16.042 16.155 15.98C16.29 15.88 16.373 15.809 16.485 15.692C16.568 15.606 16.64 15.505 16.695 15.39C16.773 15.227 16.851 14.916 16.883 14.657C16.907 14.459 16.9 14.351 16.897 14.284C16.893 14.177 16.804 14.066 16.707 14.019L16.125 13.758C16.125 13.758 15.255 13.379 14.723 13.137C14.6673 13.1127 14.6077 13.0988 14.547 13.096C14.4786 13.089 14.4094 13.0967 14.3442 13.1186C14.279 13.1405 14.2193 13.1761 14.169 13.223C14.164 13.221 14.097 13.278 13.374 14.154C13.3325 14.2098 13.2753 14.2519 13.2098 14.2751C13.1443 14.2982 13.0733 14.3013 13.006 14.284C12.9408 14.2665 12.877 14.2445 12.815 14.218C12.691 14.166 12.648 14.146 12.563 14.11C11.9891 13.8595 11.4577 13.5211 10.988 13.107C10.862 12.997 10.745 12.877 10.625 12.761C10.2316 12.3842 9.88871 11.958 9.60499 11.493L9.54599 11.398C9.50361 11.3342 9.46935 11.2653 9.44399 11.193C9.40599 11.046 9.50499 10.928 9.50499 10.928C9.50499 10.928 9.74799 10.662 9.86099 10.518C9.97099 10.378 10.064 10.242 10.124 10.145C10.242 9.955 10.279 9.76 10.217 9.609C9.93699 8.925 9.64699 8.244 9.34899 7.568C9.28999 7.434 9.11499 7.338 8.95599 7.319C8.90199 7.313 8.84799 7.307 8.79399 7.303C8.6597 7.29633 8.52513 7.29766 8.39099 7.307L8.59199 7.299L8.59299 7.3Z"/>
+                     </svg>
+                  </a></li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </footer>
+   <!-- /.footer-->
+
+   <div class="popup popup-menu">
+      <div class="popup__content">
+
+         <button class="btn-close popup__btn-close"></button>
+          <nav class="nav__menu-popup">
+               <ul class="nav__list nav__list-popup">
+                  <li class="nav__item nav__item-popup">
+                     <a href="#"><span class="nav__text">Каталог</span></a>
+                  </li>
+                  <li class="nav__item nav__item-popup">
+                     <a href="#"><span class="nav__text">О нас</span></a>                     
+                  </li>
+                  <li class="nav__item nav__item-popup">
+                     <a href="#"><span class="nav__text">Оплата и доставка</span></a>                     
+                  </li>
+               </ul>
+            </nav>
+
+            <div class="schedule-phone schedule-phone__popup">
+               <div class="schedule">с 10.00 до 20.00 без выходных</div>
+               <a class="phone" href="tel:+78432554076">+7 (843) 888-88-88</a>
+            </div>
+
+         <ul class="socials__list socials__list-popup">
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="28" height="28" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo socials__logo-popup" d="M9.9999 0.399902C4.6979 0.399902 0.399902 4.6979 0.399902 9.9999C0.399902 15.3019 4.6979 19.5999 9.9999 19.5999C15.3019 19.5999 19.5999 15.3019 19.5999 9.9999C19.5999 4.6979 15.3019 0.399902 9.9999 0.399902ZM13.6919 11.2309C13.6919 11.2309 14.5409 12.0689 14.7499 12.4579C14.7559 12.4659 14.7589 12.4739 14.7609 12.4779C14.8459 12.6209 14.8659 12.7319 14.8239 12.8149C14.7539 12.9529 14.5139 13.0209 14.4319 13.0269H12.9319C12.8279 13.0269 12.6099 12.9999 12.3459 12.8179C12.1429 12.6759 11.9429 12.4429 11.7479 12.2159C11.4569 11.8779 11.2049 11.5859 10.9509 11.5859C10.9186 11.5858 10.8866 11.5909 10.8559 11.6009C10.6639 11.6629 10.4179 11.9369 10.4179 12.6669C10.4179 12.8949 10.2379 13.0259 10.1109 13.0259H9.4239C9.1899 13.0259 7.9709 12.9439 6.8909 11.8049C5.5689 10.4099 4.3789 7.6119 4.3689 7.5859C4.2939 7.4049 4.4489 7.3079 4.6179 7.3079H6.1329C6.3349 7.3079 6.4009 7.4309 6.4469 7.5399C6.5009 7.6669 6.6989 8.1719 7.0239 8.7399C7.5509 9.6659 7.8739 10.0419 8.1329 10.0419C8.18147 10.0413 8.22917 10.029 8.2719 10.0059C8.6099 9.8179 8.5469 8.6129 8.5319 8.3629C8.5319 8.3159 8.5309 7.8239 8.3579 7.5879C8.2339 7.4169 8.0229 7.3519 7.8949 7.3279C7.94671 7.25641 8.01497 7.19845 8.0939 7.1589C8.3259 7.0429 8.7439 7.0259 9.1589 7.0259H9.3899C9.8399 7.0319 9.9559 7.0609 10.1189 7.1019C10.4489 7.1809 10.4559 7.3939 10.4269 8.1229C10.4179 8.3299 10.4089 8.5639 10.4089 8.8399C10.4089 8.8999 10.4059 8.9639 10.4059 9.0319C10.3959 9.4029 10.3839 9.8239 10.6459 9.9969C10.6801 10.0183 10.7196 10.0298 10.7599 10.0299C10.8509 10.0299 11.1249 10.0299 11.8669 8.7569C12.0957 8.34716 12.2946 7.92138 12.4619 7.4829C12.4769 7.4569 12.5209 7.3769 12.5729 7.3459C12.6113 7.32634 12.6538 7.31639 12.6969 7.3169H14.4779C14.6719 7.3169 14.8049 7.3459 14.8299 7.4209C14.8739 7.5399 14.8219 7.9029 14.0089 9.0039L13.6459 9.4829C12.9089 10.4489 12.9089 10.4979 13.6919 11.2309Z"/>
+                     </svg>
+                  </a></li>
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="31" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo socials__logo-popup" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.0069 10.4582 14.006 10.4252 13.9973 10.3938C13.9886 10.3624 13.9724 10.3337 13.95 10.31C13.89 10.26 13.81 10.28 13.74 10.29C13.65 10.31 12.25 11.24 9.52 13.08C9.12 13.35 8.76 13.49 8.44 13.48C8.08 13.47 7.4 13.28 6.89 13.11C6.26 12.91 5.77 12.8 5.81 12.45C5.83 12.27 6.08 12.09 6.55 11.9C9.47 10.63 11.41 9.79 12.38 9.39C15.16 8.23 15.73 8.03 16.11 8.03C16.19 8.03 16.38 8.05 16.5 8.15C16.6 8.23 16.63 8.34 16.64 8.42C16.63 8.48 16.65 8.66 16.64 8.8Z"/>
+                     </svg>
+                  </a></li>
+                  <li class="socials__item"><a class="socials__link" href="#" target="_blank">
+                     <svg class="socials__icon" width="31" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="socials__logo socials__logo-popup" d="M12.001 2C17.524 2 22.001 6.477 22.001 12C22.001 17.523 17.524 22 12.001 22C10.2338 22.0029 8.49765 21.5352 6.97099 20.645L2.00499 22L3.35699 17.032C2.46608 15.5049 1.99804 13.768 2.00099 12C2.00099 6.477 6.47799 2 12.001 2ZM8.59299 7.3L8.39299 7.308C8.26351 7.31589 8.13697 7.3499 8.02099 7.408C7.91251 7.46943 7.81349 7.54622 7.72699 7.636C7.60699 7.749 7.53899 7.847 7.46599 7.942C7.09611 8.4229 6.89696 9.01331 6.89999 9.62C6.90199 10.11 7.02999 10.587 7.22999 11.033C7.63899 11.935 8.31199 12.89 9.19999 13.775C9.41399 13.988 9.62399 14.202 9.84999 14.401C10.9534 15.3725 12.2682 16.073 13.69 16.447L14.258 16.534C14.443 16.544 14.628 16.53 14.814 16.521C15.1052 16.506 15.3896 16.4271 15.647 16.29C15.7779 16.2225 15.9057 16.1491 16.03 16.07C16.03 16.07 16.073 16.042 16.155 15.98C16.29 15.88 16.373 15.809 16.485 15.692C16.568 15.606 16.64 15.505 16.695 15.39C16.773 15.227 16.851 14.916 16.883 14.657C16.907 14.459 16.9 14.351 16.897 14.284C16.893 14.177 16.804 14.066 16.707 14.019L16.125 13.758C16.125 13.758 15.255 13.379 14.723 13.137C14.6673 13.1127 14.6077 13.0988 14.547 13.096C14.4786 13.089 14.4094 13.0967 14.3442 13.1186C14.279 13.1405 14.2193 13.1761 14.169 13.223C14.164 13.221 14.097 13.278 13.374 14.154C13.3325 14.2098 13.2753 14.2519 13.2098 14.2751C13.1443 14.2982 13.0733 14.3013 13.006 14.284C12.9408 14.2665 12.877 14.2445 12.815 14.218C12.691 14.166 12.648 14.146 12.563 14.11C11.9891 13.8595 11.4577 13.5211 10.988 13.107C10.862 12.997 10.745 12.877 10.625 12.761C10.2316 12.3842 9.88871 11.958 9.60499 11.493L9.54599 11.398C9.50361 11.3342 9.46935 11.2653 9.44399 11.193C9.40599 11.046 9.50499 10.928 9.50499 10.928C9.50499 10.928 9.74799 10.662 9.86099 10.518C9.97099 10.378 10.064 10.242 10.124 10.145C10.242 9.955 10.279 9.76 10.217 9.609C9.93699 8.925 9.64699 8.244 9.34899 7.568C9.28999 7.434 9.11499 7.338 8.95599 7.319C8.90199 7.313 8.84799 7.307 8.79399 7.303C8.6597 7.29633 8.52513 7.29766 8.39099 7.307L8.59199 7.299L8.59299 7.3Z"/>
+                     </svg>
+                  </a></li>
+         </ul>
+      </div>
+   </div>
+   <!-- /.popup-menu-->
+
+   <div class="popup popup-order">
+      <div class="popup__content popup-order__content">
+         <button class="btn-close popup__btn-close"></button>
+         <h3 class="popup__title">Оформление заказа</h3>
+         <div class="order">
+            <img class="order__img" src="./img/catalog/1.jpg" alt="">
+            <h4 class="order__title">Торт Сильвер</h4>
+            <div class="order__price">
+               <span class="product__price-value">2490</span>
+               <span class="product__price-currency">&#8381;</span>
+            </div>
+            <div class="order__size">2 кг</div>
+            
+         </div>
+         <form class="order-form">
+            <input type="hidden" name="наименование">
+            <input type="hidden" name="цена">
+            <input type="hidden" name="вес">
+            <input class="order-form__input" type="text" placeholder="Введите имя" name="имя" required>
+            <input class="order-form__input" type="text" placeholder="Укажите номер телефона" name="телефон" required>
+            <input class="order-form__input" type="text" placeholder="Укажите адрес доставки" name="адрес" required>
+            <select class="order-form__input" name="оплата" id="">
+               <option class="order-form__option" value="Оплата наличными">Оплата наличными</option>
+               <option class="order-form__option" value="Оплата картой">Оплата картой</option>
+            </select>
+            <button class="btn order-form__btn" type="submit">Отправить заказ</button>
+         </form>
+      </div>
+   </div>
+   <!-- /.popup-order-->
+
+   <div class="popup popup-thanks">
+      <div class="popup__content popup-thanks__content"><button class="btn-close popup__btn-close"></button>
+         <h3 class="popup__title">Спасибо за заказ!</h3>
+         <p class="popup__subtitle">Мы скоро свяжемся с вами для подтверждения заказа.</p>
+      </div>
+   </div>
+   <!-- /.popup-thanks-->
+
+   <div class="popup popup-error">
+      <div class="popup__content popup-error__content"><button class="btn-close popup__btn-close"></button>
+         <h3 class="popup__title">Произошла ошибка</h3>
+         <p class="popup__subtitle">Пожалуйста, сделайте заказ по номеру 
+            <a class="popup__phone" href="tel:+78432554076">+7 (843) 888-88-88</a>
+         </p>
+      </div>
+   </div>
+   <!-- /.popup-thanks-->
+
+   <script src="js/main.js"></script>
 </body>
 </html>
