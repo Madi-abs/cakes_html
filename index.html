@@ -3,7 +3,16 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Торты на заказ</title>
+   <title>Торты на заказ - с доставкой по Казани</title>
+   
+   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+   <link rel="manifest" href="/img/favicon/site.webmanifest">
+   <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#f74737">
+   <meta name="msapplication-TileColor" content="#ffc40d">
+   <meta name="theme-color" content="#ffffff">
+
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/style.css">
@@ -14,7 +23,7 @@
          <div class="header__left">
             <div class="logo">
                <a href="#">
-                  <img src="./img/heroicons_cake-20-solid-white.svg" alt="logo" width="33">
+                  <img class="logo__img lazy" data-src="./img/heroicons_cake-20-solid-white.svg" alt="logo" width="33">
                </a>
             </div>
             <div class="schedule-phone">
@@ -26,13 +35,13 @@
             <nav class="nav__menu">
                <ul class="nav__list">
                   <li class="nav__item">
-                     <a class="nav__link" href="#"><span class="nav__text">Каталог</span></a>
+                     <a class="nav__link" href="#"><span class="nav__text" data-scroll-to="section-catalog">Каталог</span></a>
                   </li>
                   <li class="nav__item">
-                     <a class="nav__link" href="#"><span class="nav__text">О нас</span></a>                     
+                     <a class="nav__link" href="#"><span class="nav__text" data-scroll-to="section-about">О нас</span></a>                     
                   </li>
                   <li class="nav__item">
-                     <a class="nav__link" href="#"><span class="nav__text">Оплата и доставка</span></a>                     
+                     <a class="nav__link" href="#"><span class="nav__text" data-scroll-to="section-delivery">Оплата и доставка</span></a>                     
                   </li>
                </ul>
             </nav>
@@ -49,11 +58,11 @@
    <!-- /.header -->
 
    <main>
-      <section class="hero">
+      <section class="hero lazy" data-bg="/img/lemon-cake-with-cream-on-plate.jpg">
          <div class="container hero__container">
             <h1 class="hero__title">Торты на заказ в Казани</h1>
             <p class="hero__subtitle">Только натуральные ингридиенты</p>
-            <button class="btn hero__btn" type="button">Выбрать торт</button>
+            <button class="btn hero__btn" type="button" data-scroll-to="section-catalog">Выбрать торт</button>
          </div>
       </section>
       <!-- /.hero -->
@@ -65,33 +74,33 @@
                 <nav class="catalog__nav">
                   <ul class="catalog__nav-list">
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn is-active" type="button">Все торты</button>
+                        <button class="catalog__nav-btn is-active" type="button" data-filter="all">Все торты</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">Детские</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="kids">Детские</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">Свадебные</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="wedding">Свадебные</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">На день рождения</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="birthday">На день рождения</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">Бенто-торты</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="bento">Бенто-торты</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">Капкейки</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="korporativnye">Корпоративные</button>
                      </li>
                      <li class="catalog__nav-item">
-                        <button class="catalog__nav-btn" type="button">Пирожные</button>
+                        <button class="catalog__nav-btn" type="button" data-filter="cakes">Пирожные</button>
                      </li>
                   </ul>
                </nav>
             </div>
             <ul class="catalog__list">
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="wedding">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/1.jpg" alt="">
                      <div class="product__content">
                         <h3 class="product__title">Торт Сильвер</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
@@ -99,101 +108,101 @@
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="2990" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="3990" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="4990" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="5990" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">2990</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="kids">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/2.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Торт Карамель и безе</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="2790" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="3790" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="4790" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="5790" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">2790</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="wedding">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/3.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Торт Облако</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="3490" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="4480" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="5490" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="6190" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">3490</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="birthday">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/4.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Торт Весна</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="2590" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="3590" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="4590" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="4990" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">2590</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="kids">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/kids2_.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Торт Карамельная принцесса</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
@@ -207,77 +216,77 @@
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">2790</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="bento">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/tort_bento_kryski.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Торт бенто крыски</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="2890" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="3790" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="4590" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="5190" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">2890</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="korporativnye">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/korporativnyy_tort_1.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
+                        <h3 class="product__title">Корпоративный торт 8 марта</h3>
                         <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="1490" class="product__size is-active" type="button">2 кг</button>
+                           <button data-product-size-price="2490" class="product__size" type="button">3 кг</button>
+                           <button data-product-size-price="2990" class="product__size" type="button">4 кг</button>
+                           <button data-product-size-price="3490" class="product__size" type="button">5 кг</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
                         <div class="product__price">
-                           <span class="product__price-value">2490</span>
+                           <span class="product__price-value">1490</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
-               <li class="catalog__item">
+               <li class="catalog__item" data-category="cakes">
                   <article class="catalog__product">
-                     <img class="product__img" src="/img/catalog/1.jpg" alt="">
+                     <img class="product__img lazy" data-src="/img/catalog/cakes1.jpg" alt="">
                      <div class="product__content">
-                        <h3 class="product__title">Торт Сильвер</h3>
-                        <div class="product__descr">Состав: Масло, ананас, грецкий орех, яйцо, сахар, мука, ваниль.</div>
+                        <h3 class="product__title">Капкейк Новогодние игрушки</h3>
+                        <div class="product__descr">Состав: Миндальная мука, сахар, яйцо, разрыхлитель, ваниль, мастика, сливки, пищевые красители.</div>
                         <div class="product__info">КБЖУ на 100гр: Б. 7,5 / Ж. 15,9 / У. 33,3 / кКал. 256,4</div>
                      </div>
                      <footer class="product__footer">
                         <div class="product__sizes">
-                           <button class="product__size is-active" type="button">2 кг</button>
-                           <button class="product__size" type="button">3 кг</button>
-                           <button class="product__size" type="button">4 кг</button>
-                           <button class="product__size" type="button">5 кг</button>
+                           <button data-product-size-price="2490" class="product__size is-active" type="button">6 шт</button>
+                           <button data-product-size-price="3190" class="product__size" type="button">12 шт</button>
+                           <button data-product-size-price="3990" class="product__size" type="button">24 шт</button>
+                           <button data-product-size-price="4290" class="product__size" type="button">36 шт</button>
                         </div>
                      </footer>
                      <div class="product__bottom">
@@ -285,7 +294,7 @@
                            <span class="product__price-value">2490</span>
                            <span class="product__price-currency">&#8381;</span>
                         </div>
-                        <button class="btn product__btn" type="button">Заказать</button>
+                        <button class="btn product__btn" type="button" data-popup="popup-order">Заказать</button>
                      </div>
                   </article>
                </li>
@@ -295,7 +304,7 @@
       <!-- /.catalog-->
 
       <section class="section-about">
-         <img class="section-about__img" src="./img/about-bg.jpg" alt="">
+         <img class="section-about__img lazy" data-src="/img/about-bg.jpg" alt="">
          <div class="container section-about__container">
             <div class="section-about__content">
                <h2 class="section__title section-about__title">О нас</h2>
@@ -332,7 +341,7 @@
             <ul class="news__list">
                <li class="news__item">
                   <a class="news__link" href="#">
-                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <img class="news__img lazy" data-src="/img/news/news1.jpg" alt="">
                      <div class="news__content">
                         <div class="news__topic">Советы покупателям</div>
                         <h4 class="news__title">Как выбрать свадебный торт</h4>
@@ -342,7 +351,7 @@
                </li>
                <li class="news__item">
                   <a class="news__link" href="#">
-                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <img class="news__img lazy" data-src="/img/news/news1.jpg" alt="">
                      <div class="news__content">
                         <div class="news__topic">Советы покупателям</div>
                         <h4 class="news__title">Как выбрать свадебный торт</h4>
@@ -352,7 +361,7 @@
                </li>
                <li class="news__item">
                   <a class="news__link" href="#">
-                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <img class="news__img lazy" data-src="/img/news/news1.jpg" alt="">
                      <div class="news__content">
                         <div class="news__topic">Советы покупателям</div>
                         <h4 class="news__title">Как выбрать свадебный торт</h4>
@@ -362,7 +371,7 @@
                </li>
                <li class="news__item">
                   <a class="news__link" href="#">
-                     <img class="news__img" src="/img/news/news1.jpg" alt="">
+                     <img class="news__img lazy" data-src="/img/news/news1.jpg" alt="">
                      <div class="news__content">
                         <div class="news__topic">Советы покупателям</div>
                         <h4 class="news__title">Как выбрать свадебный торт</h4>
@@ -376,7 +385,7 @@
       <!-- /.news-->
    </main>
 
-   <footer class="footer" style="background-image: url('./img/footer-bg.jpg');">
+   <footer class="footer lazy" data-bg="/img/footer-bg.jpg">
       <div class="container footer__container">
          <div class="footer__info">
             <h3 class="footer__title">Торты за заказ в Казани</h3>
@@ -385,21 +394,20 @@
          <nav class="footer__nav">
             <h3 class="footer__title">Информация</h3>
             <ul class="footer__nav-list">
-               <li class="footer__nav-item"><a href="#">Каталог</a></li>
-               <li class="footer__nav-item"><a href="#">Оплата и доставка</a></li>
-               <li class="footer__nav-item"><a href="#">О нас</a></li>
-               <li class="footer__nav-item"><a href="#">Вакансии</a></li>
+               <li class="footer__nav-item"><a href="#" data-scroll-to="section-catalog">Каталог</a></li>
+               <li class="footer__nav-item"><a href="#" data-scroll-to="section-delivery">О нас</a></li>
+               <li class="footer__nav-item"><a href="#" data-scroll-to="section-about">Оплата и доставка</a></li>
             </ul>
          </nav>
          <nav class="footer__nav">
             <h3 class="footer__title">Торты</h3>
             <ul class="footer__nav-list">
-               <li class="footer__nav-item"><a href="#">Детские</a></li>
-               <li class="footer__nav-item"><a href="#">Свадебные</a></li>
-               <li class="footer__nav-item"><a href="#">На день рождения</a></li>
-               <li class="footer__nav-item"><a href="#">Бенто-торты</a></li>
-               <li class="footer__nav-item"><a href="#">Капкейки</a></li>
-               <li class="footer__nav-item"><a href="#">Пирожные</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="kids">Детские</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="wedding">Свадебные</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="birthday">На день рождения</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="bento">Бенто-торты</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="korporativnye">Корпоративные</a></li>
+               <li class="footer__nav-item"><a href="#" data-filter="cakes">Пирожные</a></li>
             </ul>
          </nav>
          <nav class="footer__nav footer__nav-subscribe">
@@ -439,17 +447,17 @@
    <div class="popup popup-menu">
       <div class="popup__content">
 
-         <button class="btn-close popup__btn-close"></button>
+         <button class="btn-close popup__btn-close popup-close"></button>
           <nav class="nav__menu-popup">
                <ul class="nav__list nav__list-popup">
                   <li class="nav__item nav__item-popup">
-                     <a href="#"><span class="nav__text">Каталог</span></a>
+                     <a href="#"><span class="nav__text popup-close" data-scroll-to="section-catalog">Каталог</span></a>
                   </li>
                   <li class="nav__item nav__item-popup">
-                     <a href="#"><span class="nav__text">О нас</span></a>                     
+                     <a href="#"><span class="nav__text popup-close" data-scroll-to="section-about">О нас</span></a>                     
                   </li>
                   <li class="nav__item nav__item-popup">
-                     <a href="#"><span class="nav__text">Оплата и доставка</span></a>                     
+                     <a href="#"><span class="nav__text popup-close" data-scroll-to="section-delivery">Оплата и доставка</span></a>                     
                   </li>
                </ul>
             </nav>
@@ -482,22 +490,24 @@
 
    <div class="popup popup-order">
       <div class="popup__content popup-order__content">
-         <button class="btn-close popup__btn-close"></button>
+         <button class="btn-close popup__btn-close popup-close"></button>
          <h3 class="popup__title">Оформление заказа</h3>
          <div class="order">
-            <img class="order__img" src="./img/catalog/1.jpg" alt="">
-            <h4 class="order__title">Торт Сильвер</h4>
+            <img class="order__img" data-src="./img/catalog/1.jpg" alt="">
+            <h4 class="order__title">
+               <span class="order-product-title">Торт Сильвер</span>
+            </h4>
             <div class="order__price">
-               <span class="product__price-value">2490</span>
-               <span class="product__price-currency">&#8381;</span>
+               <span class="order-product-price">2490</span>
+               <span>&#8381;</span>
             </div>
             <div class="order__size">2 кг</div>
             
          </div>
-         <form class="order-form">
-            <input type="hidden" name="наименование">
-            <input type="hidden" name="цена">
-            <input type="hidden" name="вес">
+         <form class="order-form form-send">
+            <input class="order-info-title" type="hidden" name="наименование">
+            <input class="order-info-price" type="hidden" name="цена">
+            <input class="order-info-size" type="hidden" name="вес">
             <input class="order-form__input" type="text" placeholder="Введите имя" name="имя" required>
             <input class="order-form__input" type="text" placeholder="Укажите номер телефона" name="телефон" required>
             <input class="order-form__input" type="text" placeholder="Укажите адрес доставки" name="адрес" required>
@@ -512,7 +522,8 @@
    <!-- /.popup-order-->
 
    <div class="popup popup-thanks">
-      <div class="popup__content popup-thanks__content"><button class="btn-close popup__btn-close"></button>
+      <div class="popup__content popup-thanks__content">
+         <button class="btn-close popup__btn-close popup-close"></button>
          <h3 class="popup__title">Спасибо за заказ!</h3>
          <p class="popup__subtitle">Мы скоро свяжемся с вами для подтверждения заказа.</p>
       </div>
@@ -520,7 +531,8 @@
    <!-- /.popup-thanks-->
 
    <div class="popup popup-error">
-      <div class="popup__content popup-error__content"><button class="btn-close popup__btn-close"></button>
+      <div class="popup__content popup-error__content">
+         <button class="btn-close popup__btn-close popup-close"></button>
          <h3 class="popup__title">Произошла ошибка</h3>
          <p class="popup__subtitle">Пожалуйста, сделайте заказ по номеру 
             <a class="popup__phone" href="tel:+78432554076">+7 (843) 888-88-88</a>
@@ -529,6 +541,9 @@
    </div>
    <!-- /.popup-thanks-->
 
+   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script>
+   <script src="https://unpkg.com/focus-visible"></script>
+   <script src="js/myLib.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>

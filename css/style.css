@@ -21,6 +21,10 @@ body {
    color: #1f1f1f;
 }
 
+.no-scroll {
+   overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
    margin: 0;
    padding: 0;
@@ -101,6 +105,11 @@ ul, li {
    gap: 15px;
 }
 
+.logo {
+   width: 33px;
+   height: 33px;
+}
+
 .schedule {
    margin-bottom: 2px;
    font-size: 10px;
@@ -119,7 +128,6 @@ ul, li {
 }
 
 .nav__item {
-   padding: 0 20px;
    position: relative;
    font-size: 14px;
    font-weight: 500;
@@ -145,6 +153,9 @@ ul, li {
 
 .nav__text {
    position: relative;
+   display: block;
+   padding: 10px 20px;
+   z-index: 6;
 }
 
 .hamburger {
@@ -209,14 +220,13 @@ ul, li {
 .hero {
    position: relative;
    height: 100vh;
-   /* min-height: 500px; */
    padding-top: 50px;
    display: flex;
    justify-content: center;
    align-items: center;
    text-align: center;
 
-   background: #f74737 url(../img/lemon-cake-with-cream-on-plate.jpg) no-repeat center center;
+   background: #ff978e no-repeat center center;
    background-size: cover;
    color: #fff;
    line-height: 1.2;
@@ -376,6 +386,8 @@ ul, li {
 .product__img {
    display: block;
    margin: 0 auto 15px;
+   width: 228px;
+   height: auto;
 }
 
 .product__title {
@@ -653,6 +665,8 @@ ul, li {
 .news__img {
    display: block;
    margin: 0 auto;
+   width: 278px;
+   height: 185px;
 }
 
 .news__content {
@@ -691,6 +705,7 @@ ul, li {
 /* footer START */
 .footer {
    position: relative;
+   background-color: #1f1f1f;
    background-position: center center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -710,7 +725,7 @@ ul, li {
    display: flex;
    justify-content: space-between;
    column-gap: 15px;
-   padding: 60px 15px;
+   padding: 60px 15px 120px;
    position: relative;
    color: #fff;
 }
@@ -760,7 +775,6 @@ ul, li {
 
 .footer__subscribe-input {
    font-size: 12px;
-   outline: none;
    padding: 8px 10px;
    border: 1px solid #a0a0a0;
 }
@@ -830,6 +844,7 @@ ul, li {
       flex-direction: column;
       text-align: center;
       margin: 0 auto;
+      padding-bottom: 20px;
    }
    .footer__nav {
       width: 100%;
@@ -978,10 +993,10 @@ ul, li {
    fill: #eb3323;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
    .popup__content {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       margin: auto 0;
       border-radius: 0;
    }
@@ -1037,7 +1052,6 @@ ul, li {
    border: 1px solid transparent;
    border-radius: 4px;
    background-color: #f4f1f1;
-   outline: none;
 }
 
 .order-form__input::placeholder {
@@ -1077,4 +1091,12 @@ ul, li {
 }
 /* popup-thanks, popup-error END */
 
-/* фикс хедер */
+/* focus-visible START */
+/*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not(.focus-visible) {
+   outline: none;
+}
+/* focus-visible END */
